@@ -27,12 +27,12 @@ Isso coloca o foco principal no gerenciamento de:
 ## 📊 Benchmarks & Reality Check / Benchmarks & Resultados Reais
 
 ### The Battle for Concurrency
-* **Python Loop:** ~85.91 seconds (Linear blocking. The script falls asleep waiting for overseas handshakes sequentially).
-* **Go Engine:** ~5.00 seconds (True concurrency. Spawns asynchronous light threads to process all requests simultaneously, ignoring geographic distance).
+* **Python Loop:** ~99.88 seconds (Linear blocking. The script falls asleep waiting for overseas handshakes sequentially).
+* **Go Engine:** ~1.476275668 seconds (True concurrency. Spawns asynchronous light threads to process all requests simultaneously, ignoring geographic distance).
 
 ### A Batalha de Concorrência
-* **Loop Python:** ~85.91 segundos (Bloqueio linear. O script "dorme" esperando os handshakes internacionais sequencialmente).
-* **Motor Go:** ~5.00 segundos (Concorrência real. Cria threads leves assíncronas para processar todas as requisições simultaneamente, ignorando a distância geográfica).
+* **Loop Python:** ~99.88 segundos (Bloqueio linear. O script "dorme" esperando os handshakes internacionais sequencialmente).
+* **Motor Go:** ~1.476275668 segundos (Concorrência real. Cria threads leves assíncronas para processar todas as requisições simultaneamente, ignorando a distância geográfica).
 
 > **Performance Gain / Ganho de Performance:** Go outpaced Python by **~17x** under real-world, high-latency network load! / O Go superou o Python em cerca de **17 vezes** sob carga de rede real de alta latência!
 
