@@ -34,6 +34,6 @@ func TestCheckURL_Success(t *testing.T) {
 		t.Errorf("Ожидался статус 200, получили /// %d /// Esperado status 200, obtido", res.Status)
 	}
 	if res.Error != "" {
-		t.Errorf("Ожидалась пустая ошибка, получили: /// %d /// Esperada mensagem de erro vazia, obtida: ", res.Error)
+		t.Errorf("Ожидалась пустая ошибка, получили: /// %s /// Esperada mensagem de erro vazia, obtida: ", res.Error)
 	}
 }
