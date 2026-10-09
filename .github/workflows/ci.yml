@@ -1,0 +1,40 @@
+name: Go and Python Concurrency Rally CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest  # Запускаем на чистой Ubuntu / Executa o robô em uma máquina limpa com Ubuntu
+    
+    steps:
+    # 1. Скачиваем код из репозитория
+    # 1. Baixa o código do repositório para o ambiente do robô
+    - name: Check out repository code
+      uses: actions/checkout@v4
+
+    # 2. Настраиваем окружение для Go (ставим компилятор нужной версии)
+    # 2. Configura o ambiente Go com a versão correta do compilador
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.26' # Указываем вашу рабочую версию Go / Especifique a versão do Go que você está utilizando
+
+    # 3. ЗАПУСКАЕМ ТЕСТЫ GO
+    # 3. EXECUTA OS TESTES UNITÁRIOS EM GO
+    - name: Run Go Tests
+      run: |
+        echo "=== ЗАПУСК ЛОКАЛЬНЫХ ТЕСТОВ / INICIANDO TESTES LOCAIS ==="
+        cd go_service
+        go test -v ./...
+        echo "=== ТЕСТЫ УСПЕШНО ПРОЙДЕНЫ / TESTES CONCLUÍDOS COM SUCESSO ==="
+
+    # 4. Если тесты прошли, собираем итоговый Docker-контейнер
+    # 4. Se os testes passarem, reconstrói a imagem Docker Multi-stage final
+    - name: Build Final Multi-stage Docker Image
+      run: |
+           echo "Начинаем сборку Docker-образа... / Iniciando a construção da imagem Docker..."
+           docker build -t url-checker-rally:latest .

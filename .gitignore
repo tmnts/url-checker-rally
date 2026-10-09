@@ -1,0 +1,9 @@
+# Игнорируем тяжелые локальные отчеты, которые создают скрипты
+# Ignorar relatórios locais pesados ​​gerados por scripts
+*.csv
+
+# Игнорируем кэш Python
+# Ignorando o cache do Python
+__pycache__/
+*.pyc
+
