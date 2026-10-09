@@ -59,7 +59,7 @@ Você não precisa instalar o Go ou o Python na sua máquina local. Todo o ambie
 
 1. **Clone the repository / Clone o repositório:**
    ```bash
-   git clone https://github.com
+   git clone [https://github.com/tmnts/url-checker-rally]
    cd url-checker-rally
    ```
 
