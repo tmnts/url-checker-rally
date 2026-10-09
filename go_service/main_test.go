@@ -31,9 +31,9 @@ func TestCheckURL_Success(t *testing.T) {
 	// 3. Verifica o resultado vindo do canal
 	res := <-ch
 	if res.Status != 200 {
-		t.Errorf("Ожидался статус 200, получили %d / Esperado status 200, obtido %d", res.Status)
+		t.Errorf("Ожидался статус 200, получили /// %d /// Esperado status 200, obtido", res.Status)
 	}
 	if res.Error != "" {
-		t.Errorf("Ожидалась пустая ошибка, получили: %s / Esperada mensagem de erro vazia, obtida: %s", res.Error)
+		t.Errorf("Ожидалась пустая ошибка, получили: /// %d /// Esperada mensagem de erro vazia, obtida: ", res.Error)
 	}
 }

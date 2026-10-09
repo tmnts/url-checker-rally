@@ -99,5 +99,5 @@ func main() {
 		})
 	}
 
-	fmt.Printf("Go: Готово за %v. Результаты в report_go.csv / Concluído em %v. Resultados em report_go.csv.\n", time.Since(start), time.Since(start))
+	fmt.Printf("Go: Готово. Результаты в report_go.csv ///%v/// Concluído. Resultados em report_go.csv.\n", time.Since(start))
 }

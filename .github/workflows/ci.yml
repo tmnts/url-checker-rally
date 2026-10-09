@@ -36,5 +36,5 @@ jobs:
     # 4. Se os testes passarem, reconstrói a imagem Docker Multi-stage final
     - name: Build Final Multi-stage Docker Image
       run: |
-           echo "Начинаем сборку Docker-образа... / Iniciando a construção da imagem Docker..."
-           docker build -t url-checker-rally:latest .
+        echo "Начинаем сборку Docker-образа... / Iniciando a construção da imagem Docker..."
+        docker build -t url-checker-rally:latest .
